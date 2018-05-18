@@ -17,9 +17,10 @@ public class Program2
         LCD.drawString("Program 2",0,0);
         Button.waitForAnyPress();
         LCD.clear();
-        Motor.A.setSpeed(2);
+        Motor.A.setSpeed(720);
         Motor.A.forward();
         Delay.msDelay(2000);
+        Motor.A.stop();
         String s = "" + Motor.A.getTachoCount();
         LCD.drawString(s,0,0);
         Motor.A.stop();

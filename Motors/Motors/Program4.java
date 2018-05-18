@@ -10,6 +10,7 @@ public class Program4
 {
     public static void main(String[]args){
         LCD.drawString("Program 4",0,0);
+        Button.waitForAnyPress();
         Motor.A.rotate(-1440);
         while(Motor.A.isMoving()){
             if(Button.waitForAnyPress() != 0){
