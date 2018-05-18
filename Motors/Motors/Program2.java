@@ -25,5 +25,15 @@ public class Program2
         Motor.A.stop();
         s = "" + Motor.A.getTachoCount();
         LCD.drawString(s,1,0);
+        Motor.A.backward();
+        while (Motor.A.getTachoCount() != 0)
+        {
+        }
+        s = "" + Motor.A.getTachoCount();
+        LCD.drawString(s,2,0);
+        Motor.A.stop();
+        s = "" + Motor.A.getTachoCount();
+        LCD.drawString(s,3,0);
+        Button.waitForAnyPress();
     }
 }
