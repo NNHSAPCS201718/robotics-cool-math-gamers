@@ -12,7 +12,7 @@ import lejos.util.*;
  */
 public class Program2
 {
-    public void main(String[] args)
+    public static void main(String[] args)
     {
         LCD.drawString("Program 2",0,0);
         Button.waitForAnyPress();
