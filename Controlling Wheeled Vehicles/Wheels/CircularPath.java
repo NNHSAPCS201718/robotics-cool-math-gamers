@@ -1,33 +1,22 @@
-
+import lejos.nxt.Motor;
+import lejos.robotics.navigation.DifferentialPilot;
+import lejos.util.ButtonCounter;
 /**
  * Write a description of class CircularPath here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * @author CoolMath-Gamers
+ * @version 5/21/18
  */
-public class CircularPath
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class CircularPath
-     */
-    public CircularPath()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public class CircularPath{   
+    static DifferentialPilot pilot;
+    public static void main(String[]args){
+        pilot = new DifferentialPilot(3,5,Motor.A,Motor.C);
+        ButtonCounter count = new ButtonCounter();
+        
+        while(true){
+            count.count("Turn Rate x 10 AND Angle x 2");
+            int turnRate = 10 * (count.getLeftCount() + count.getRightCount());
+            int angle = 10 * (count.getLeftCount() + count.getRightCount());
+            pilot.steer(turnRate,angle);
+        }
     }
 }
