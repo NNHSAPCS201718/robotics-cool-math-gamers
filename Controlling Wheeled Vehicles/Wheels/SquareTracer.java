@@ -11,7 +11,7 @@ import lejos.robotics.navigation.DifferentialPilot;
  */
 public class SquareTracer
 {
-    public void traceSquare()
+    public static void main(String[] args)
     {
         //DifferentialPilot(float wheelDiameter, float trackWidth, Motor leftMotor, Motor rightMotor)
         DifferentialPilot pilot= new DifferentialPilot(5,10,Motor.A,Motor.B);
@@ -19,8 +19,9 @@ public class SquareTracer
         while (i<=3)
         {
             
-        pilot.travel(5);
-        Motor.A.rotate(90,false);
+        pilot.travel(100);
+        Motor.A.rotate(720,false);
+        i++;
     }
 
     }
