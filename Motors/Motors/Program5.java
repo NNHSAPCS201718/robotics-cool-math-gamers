@@ -15,14 +15,16 @@ public class Program5
     public static void main(String[] args)
     {
         LCD.drawString("Program 5",0,0);
-        Motor.A.setSpeed(2);
-        Motor.B.setSpeed(2);
-        Motor.C.setSpeed(2);
+        Button.waitForAnyPress();
+        LCD.clear();
+        Motor.A.setSpeed(720);
+        Motor.B.setSpeed(720);
+        Motor.C.setSpeed(720);
         for (int i = 0; i < 8; i++)
         {
-            Motor.A.rotate(720,false);
-            Motor.B.rotate(720,false);
-            Motor.C.rotate(720,false);
+            Motor.A.rotate(720,true);
+            Motor.B.rotate(720,true);
+            //Motor.C.rotate(720,true);
             while(Motor.A.isMoving())
             {
                 System.out.println("A: " + Motor.A.getTachoCount() + "B: " + Motor.B.getTachoCount() + "C: " + Motor.C.getTachoCount());
