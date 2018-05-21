@@ -1,4 +1,8 @@
-
+import lejos.nxt.Button;
+import lejos.nxt.Motor;
+import lejos.nxt.SensorPort;
+import lejos.nxt.TouchSensor;
+import lejos.robotics.navigation.DifferentialPilot;
 /**
  * Write a description of class SquareTracer here.
  *
@@ -7,27 +11,17 @@
  */
 public class SquareTracer
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class SquareTracer
-     */
-    public SquareTracer()
+    public void traceSquare()
     {
-        // initialise instance variables
-        x = 0;
+        //DifferentialPilot(float wheelDiameter, float trackWidth, Motor leftMotor, Motor rightMotor)
+        DifferentialPilot pilot= new DifferentialPilot(5,10,Motor.A,Motor.B);
+        int i=0;
+        while (i<=3)
+        {
+            
+        pilot.travel(5);
+        Motor.A.rotate(90,false);
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
     }
 }
