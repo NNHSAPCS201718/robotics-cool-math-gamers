@@ -1,3 +1,4 @@
+import lejos.nxt.*;
 
 /**
  * Write a description of class DistanceToObject here.
@@ -7,5 +8,8 @@
  */
 public class DistanceToObject
 {
-   
+   public static void main(String[] args)
+   {
+       
+    }
 }
