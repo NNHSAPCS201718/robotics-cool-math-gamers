@@ -19,8 +19,8 @@ public class SquareTracer
         while (i<=3)
         {
             
-        pilot.travel(100);
-        Motor.A.rotate(720,false);
+        pilot.travel(1000);
+        Motor.A.rotate(1420,false);
         i++;
     }
 
