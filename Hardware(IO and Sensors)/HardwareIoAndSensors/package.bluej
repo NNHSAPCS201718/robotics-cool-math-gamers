@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 dependency1.from=LSLTester
 dependency1.to=LightSensorListener
 dependency1.type=UsesDependency
@@ -11,6 +12,17 @@ objectbench.width=800
 package.divider.horizontal=0.599476439790576
 package.divider.vertical=0.677277716794731
 package.editor.height=610
+=======
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
+objectbench.height=288
+objectbench.width=475
+package.divider.horizontal=0.599502487562189
+package.divider.vertical=0.6761800219538968
+package.editor.height=609
+>>>>>>> 8dd89e342bc22efc2b174f563b97bc24906657ce
 package.editor.width=710
 package.editor.x=840
 package.editor.y=0
